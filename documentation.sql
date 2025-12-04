@@ -1,7 +1,7 @@
 CREATE OR REPLACE FUNCTION document_code_udf(
     input_code STRING,
     code_language STRING DEFAULT 'auto',
-    model_name STRING DEFAULT 'llama2-70b-chat'
+    model_name STRING DEFAULT 'llama3.1-70b'
 )
 RETURNS VARIANT
 LANGUAGE SQL
