@@ -3,7 +3,7 @@ CREATE OR REPLACE FUNCTION generate_tests(
     input_code STRING,
     code_language STRING DEFAULT 'auto',
     test_framework STRING DEFAULT 'auto',
-    model_name STRING DEFAULT 'llama2-70b-chat'
+    model_name STRING DEFAULT 'llama3.1-70b'
 )
 RETURNS VARIANT
 LANGUAGE SQL
@@ -61,7 +61,7 @@ CREATE OR REPLACE FUNCTION generate_unit_tests(
     input_code STRING,
     code_language STRING DEFAULT 'auto',
     test_framework STRING DEFAULT 'auto',
-    model_name STRING DEFAULT 'llama2-70b-chat'
+    model_name STRING DEFAULT 'llama3.1-70b'
 )
 RETURNS VARIANT
 LANGUAGE SQL
@@ -102,7 +102,7 @@ CREATE OR REPLACE FUNCTION generate_integration_tests(
     input_code STRING,
     code_language STRING DEFAULT 'auto',
     test_framework STRING DEFAULT 'auto',
-    model_name STRING DEFAULT 'llama2-70b-chat'
+    model_name STRING DEFAULT 'llama3.1-70b'
 )
 RETURNS VARIANT
 LANGUAGE SQL
@@ -143,7 +143,7 @@ CREATE OR REPLACE FUNCTION generate_test_cases(
     input_code STRING,
     test_scenarios STRING,
     code_language STRING DEFAULT 'auto',
-    model_name STRING DEFAULT 'llama2-70b-chat'
+    model_name STRING DEFAULT 'llama3.1-70b'
 )
 RETURNS VARIANT
 LANGUAGE SQL
@@ -176,7 +176,7 @@ $$;
 CREATE OR REPLACE FUNCTION generate_sql_tests(
     sql_code STRING,
     test_framework STRING DEFAULT 'pytest',
-    model_name STRING DEFAULT 'llama2-70b-chat'
+    model_name STRING DEFAULT 'llama3.1-70b'
 )
 RETURNS VARIANT
 LANGUAGE SQL
@@ -217,7 +217,7 @@ CREATE OR REPLACE FUNCTION generate_test_data(
     input_code STRING,
     data_type STRING DEFAULT 'comprehensive',
     code_language STRING DEFAULT 'auto',
-    model_name STRING DEFAULT 'llama2-70b-chat'
+    model_name STRING DEFAULT 'llama3.1-70b'
 )
 RETURNS VARIANT
 LANGUAGE SQL
@@ -256,7 +256,7 @@ $$;
 CREATE OR REPLACE FUNCTION generate_mocks(
     input_code STRING,
     code_language STRING DEFAULT 'auto',
-    model_name STRING DEFAULT 'llama2-70b-chat'
+    model_name STRING DEFAULT 'llama3.1-70b'
 )
 RETURNS VARIANT
 LANGUAGE SQL
@@ -296,7 +296,7 @@ $$;
 CREATE OR REPLACE FUNCTION generate_performance_tests(
     input_code STRING,
     code_language STRING DEFAULT 'auto',
-    model_name STRING DEFAULT 'llama2-70b-chat'
+    model_name STRING DEFAULT 'llama3.1-70b'
 )
 RETURNS VARIANT
 LANGUAGE SQL
