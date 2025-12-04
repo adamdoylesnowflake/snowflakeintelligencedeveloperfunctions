@@ -2,7 +2,7 @@
 CREATE OR REPLACE FUNCTION refactor_code(
     input_code STRING,
     code_language STRING DEFAULT 'auto',
-    model_name STRING DEFAULT 'llama2-70b-chat',
+    model_name STRING DEFAULT 'llama3.1-70b',
     focus_area STRING DEFAULT 'all'
 )
 RETURNS VARIANT
@@ -39,7 +39,7 @@ $$;
 CREATE OR REPLACE FUNCTION refactor_pattern(
     input_code STRING,
     pattern_type STRING,
-    model_name STRING DEFAULT 'llama2-70b-chat'
+    model_name STRING DEFAULT 'llama3.1-70b'
 )
 RETURNS VARIANT
 LANGUAGE SQL
@@ -65,7 +65,7 @@ $$;
 -- Function that provides quick refactoring suggestions (less detailed)
 CREATE OR REPLACE FUNCTION quick_refactor(
     input_code STRING,
-    model_name STRING DEFAULT 'llama2-70b-chat'
+    model_name STRING DEFAULT 'llama3.1-70b'
 )
 RETURNS VARIANT
 LANGUAGE SQL
@@ -86,7 +86,7 @@ $$;
 CREATE OR REPLACE FUNCTION compare_and_refactor(
     old_code STRING,
     new_code STRING,
-    model_name STRING DEFAULT 'llama2-70b-chat'
+    model_name STRING DEFAULT 'llama3.1-70b'
 )
 RETURNS variant
 LANGUAGE SQL
@@ -113,7 +113,7 @@ $$;
 -- Function for refactoring SQL queries specifically
 CREATE OR REPLACE FUNCTION refactor_sql(
     sql_query STRING,
-    model_name STRING DEFAULT 'llama2-70b-chat'
+    model_name STRING DEFAULT 'llama3.1-70b'
 )
 RETURNS VARIANT
 LANGUAGE SQL
@@ -141,7 +141,7 @@ $$;
 CREATE OR REPLACE FUNCTION refactor_function(
     function_code STRING,
     function_language STRING DEFAULT 'auto',
-    model_name STRING DEFAULT 'llama2-70b-chat'
+    model_name STRING DEFAULT 'llama3.1-70b'
 )
 RETURNS VARIANT
 LANGUAGE SQL
