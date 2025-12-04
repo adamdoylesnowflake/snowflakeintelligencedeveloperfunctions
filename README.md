@@ -1,0 +1,2 @@
+# snowflakeintelligencedeveloperfunctions
+Creates Snowflake Intelligence Developer functions
